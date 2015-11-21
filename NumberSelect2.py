@@ -36,6 +36,8 @@ class Compare:
                 if self.maxMatches > self.maxMatchesSoFar:
                     self.maxMatchesSoFar = self.maxMatches
 
+            ## next 2 lines are beginning of work to skip list and create
+            ## Dictionary directly       
             # print(self.maxMatches)
             # self.fullResults2[self.maxMatches] = 1
 
