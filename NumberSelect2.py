@@ -22,6 +22,7 @@ class Compare:
         self.match2 = 0
         self.match3 = 0
         self.fullResults = {}
+        self.fullResults2 = {}
 
     def selectRandom(self):
         for round in range(self.rounds):
@@ -35,6 +36,10 @@ class Compare:
                 if self.maxMatches > self.maxMatchesSoFar:
                     self.maxMatchesSoFar = self.maxMatches
 
+            # print(self.maxMatches)
+            # self.fullResults2[self.maxMatches] = 1
+
+
             if self.maxMatches == 0:
                self.match0 += 1
             if self.maxMatches == 1:
@@ -46,6 +51,7 @@ class Compare:
 
             self.overallMatchesList.append(self.maxMatches)
 
+
         for i in self.overallMatchesList:
             if i not in self.fullResults:
                 self.fullResults[i] = 1
@@ -54,6 +60,7 @@ class Compare:
                 self.fullResults[i] = self.fullResults[i] + 1
 
         print("Dictionary of Results: ",self.fullResults)
+        print ("DictionaryBeta of Results: ",self.fullResults2)
         print("Total Cumulative Matches : ",self.match)
         print("Rounds: ", self.rounds)
         print("Avg Matches Per Round: ", (self.match/self.rounds))
@@ -64,7 +71,7 @@ class Compare:
         print("3 Match Rounds: {0}%".format(int((self.match3/self.rounds)*100)))
 
 def main():
-    a = Compare(10000)
+    a = Compare(5)
     b = a.selectRandom()
 
 if __name__ == '__main__': main()
