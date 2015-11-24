@@ -1,8 +1,8 @@
 
 # NumberSelect.py
 
-"""Iterates through 1-10 & picks a random number each iteration and see if there is a match.
-   Creates a List to summarize the number of matches for each of 1-10
+"""Iterates through 1-10 & picks a random number each iteration and checks if there is a match.
+   Creates a List to summarize the number of cumulative matches for each of 1-10 over all the rounds
    and uses that List to build a Dictionary.
    Dictionary is then used to build 2 vars: keyList & valueList which are
    used to print the results of the sim
