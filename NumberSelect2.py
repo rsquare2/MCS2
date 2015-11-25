@@ -40,7 +40,7 @@ class Compare:
                 self.fullResults[i] = 1
 
             else:
-                self.fullResults[i] += 1    # self.fullResults[i] + 1
+                self.fullResults[i] += 1    
 
         for key in self.fullResults:
             self.keyList.append(key)
