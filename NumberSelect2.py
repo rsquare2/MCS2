@@ -40,7 +40,7 @@ class Compare:
                 self.fullResults[i] = 1
 
             else:
-                self.fullResults[i] = self.fullResults[i] + 1
+                self.fullResults[i] += 1    # self.fullResults[i] + 1
 
         for key in self.fullResults:
             self.keyList.append(key)
@@ -63,6 +63,8 @@ class Compare:
         print()
         for counter in range(len(self.keyList)):
             intCalc = int((self.valueList[counter]/self.rounds)*100)
+            if intCalc < 1:
+                intCalc = "Less than 1% but greater than 0"
             print("{0} Match Rounds (Integer): {1}%".format(self.keyList[counter],intCalc))
 
 
