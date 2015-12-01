@@ -1,3 +1,3 @@
 # MCS2
 
-Sims exercises
+Sims exercise: Compares iteration through numbers with random picks
